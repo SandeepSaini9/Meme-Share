@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#68B1BA"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/memeImageView"
+        android:layout_width="0dp"
+        android:layout_height="480dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/shareButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/memeImageView"
+        app:layout_constraintLeft_toLeftOf="@+id/memeImageView"
+        app:layout_constraintRight_toRightOf="@+id/memeImageView"/>
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:fadingEdge="horizontal"
+        android:padding="15dp"
+        android:backgroundTint="#DD6E4B"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        app:layout_goneMarginRight="10dp"
+        android:onClick="shareMeme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:backgroundTint="@color/nextButtonColor"
+        android:text="@string/next"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="10dp"
+        android:fadingEdge="horizontal"
+        android:textAllCaps="false"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        app:layout_goneMarginRight="10dp"
+        android:onClick="nextMeme"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
