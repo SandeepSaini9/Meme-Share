@@ -1,5 +1,5 @@
 
-# Quiz App
+# Meme Share App
 
 A Kotlin App where memes will be fetched from Reddit using an API and can be shared using other apps like(WhatsApp, Facebook, etc) to our friends.
 
